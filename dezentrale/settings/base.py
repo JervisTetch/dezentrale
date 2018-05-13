@@ -164,3 +164,9 @@ WAGTAIL_SITE_NAME = "dezentrale"
 BASE_URL = 'www.dezentrale.space'
 
 JOYOUS_DEFAULT_EVENTS_VIEW = "Monthly"
+
+ALLOWED_HOSTS = [
+	'127.0.0.1',
+	'.localtunnel.me',
+	'176.9.69.238',
+	]
