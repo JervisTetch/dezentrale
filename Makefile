@@ -41,7 +41,7 @@ help:
 
 develop:
 	pip3 install -U pip setuptools wheel
-	pip3 install -U -c requirements.txt
+	pip3 install -r requirements.txt
 
 dist: clean
 	python setup.py sdist bdist_wheel

@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     'home',
     'search',
     'general',
+    'events',
+    'ls.joyous',
+    'wagtail.contrib.modeladmin',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -72,6 +75,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(PROJECT_DIR, 'templates'),
             os.path.join(BASE_DIR, 'general/templates/general'),
+            os.path.join(BASE_DIR, 'events/templates/events'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -158,3 +162,5 @@ WAGTAIL_SITE_NAME = "dezentrale"
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'www.dezentrale.space'
+
+JOYOUS_DEFAULT_EVENTS_VIEW = "Monthly"
