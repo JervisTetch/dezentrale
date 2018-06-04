@@ -17,7 +17,11 @@ go into that directory, and install virtualenv via pip3 and activate it:
 
 `source .venv/bin/activate`
 
-To install all dependencies, run `make develop` in that directory (at the same level as manage.py and the Makefile is). All you have to do now is to setup the database with the migations, create a superuser and run the development server:
+To install all dependencies, run `make develop` in that directory (at the same level as manage.py and the Makefile is). 
+
+Note: if an error is occurring, you can download all packages via `pip3 install [package]` on your own, these can be found in the *requirements.txt*.
+
+All you have to do now is to setup the database with the migations, create a superuser and run the development server:
 
 `make migrate`
 
