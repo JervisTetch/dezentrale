@@ -75,7 +75,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(PROJECT_DIR, 'templates'),
             os.path.join(BASE_DIR, 'general/templates/general'),
-            os.path.join(BASE_DIR, 'events/templates/events'),
+           # os.path.join(BASE_DIR, 'events/templates/events'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
