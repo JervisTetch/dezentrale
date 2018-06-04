@@ -3,7 +3,11 @@ The new Website, based on the dezentrale_web project, but renewed with python3.
 
 To start working on the project, simply clone it via:
 
-`git clone https://github.com/Dezentrale-eV/dezentrale.git`
+`git clone https://github.com/Dezentrale-eV/dezentrale.git` 
+
+*or* via ssh:
+
+`git@github.com:Dezentrale-eV/dezentrale.git`
 
 go into that directory, and install virtualenv via pip3 and activate it:
 
