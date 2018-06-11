@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="inner">
+    <div class="align-center" style="padding-top: 3rem; padding-bottom: 1rem">
+        <h1>{{ page.title }}</h1>
+    </div>
+    <div class="align-center">
+        {% for block in page.content %}
+            {% if block.block_type == 'Text' %}
+                <div>
+                    <p>{{block.value}}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -38,3 +38,13 @@ class ImpressumPage(Page):
     ])
     content_panels = Page.content_panels + [
         StreamFieldPanel('content')]
+
+
+class MitmachPage(Page):
+    content = StreamField([
+        ('Introduction_for_Homepage', blocks.CharBlock(max_length=200)),
+        ('Text', blocks.RichTextBlock()),
+    ])
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('content')
+    ]
