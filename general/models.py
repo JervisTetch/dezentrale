@@ -48,3 +48,7 @@ class MitmachPage(Page):
     content_panels = Page.content_panels + [
         StreamFieldPanel('content')
     ]
+
+
+class LandingPage(Page):
+    content = blocks.CharBlock()

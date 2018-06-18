@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load wagtailcore_tags %}
 {% block content %}
     <!-- Keywords / Introduction and Logo -->
     <section id="one" class="wrapper">
@@ -44,24 +45,24 @@
             </div>
         </div>
     </section>
-
-    <!-- Banner Section -->
-    <section id="banner">
-        <div class="content">
-
-            <h1>Dezentrale. Hackerspace. WTF?!</h1>
-            <p>
-              Die Dezentrale ist ein gemeinschaftlich verwalteter Ort,<br>
-              an dem technologisch interessierte Menschen zusammen kommen können um voneinander zu lernen und an
-              Projekten zu basteln.
-            </p>
-            <ul class="actions">
-                <li><a href="#one" class="button scrolly">Mehr über uns...</a></li>
-            </ul>
-
-        </div>
-    </section>
-
+        <!-- Banner Section -->
+        <section id="banner">
+            <div class="align-center">
+                <div class="content inner" style="padding-left: 4rem; padding-right: 4rem;">
+                    {% for item in self.get_children.live.specific %}
+                        {% if "machen" in item.title.lower %}
+                            <h1>{{item.title}}</h1>
+                            {% for block in item.content %}
+                                {% if block.block_type == "Introduction_for_Homepage" %}
+                                    <p>{{block}}</p>
+                                {% endif %}
+                            {% endfor %}
+                            <a href="{% pageurl item %}" class="button scrolly">Mehr erfahren...</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
     <!-- Three picture boxes section -->
     <section id="three" class="wrapper">
         <div class="inner flex flex-3">
