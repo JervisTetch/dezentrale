@@ -7,7 +7,7 @@ To start working on the project, simply clone it via:
 
 *or* via ssh:
 
-`git@github.com:Dezentrale-eV/dezentrale.git`
+`git clone git@github.com:Dezentrale-eV/dezentrale.git`
 
 go into that directory, and install virtualenv via pip3 and activate it:
 
