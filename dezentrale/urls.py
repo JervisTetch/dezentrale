@@ -14,7 +14,8 @@ urlpatterns = [
     re_path(r'^admin/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'^wagtail/', include(wagtail_urls)),
-
+    re_path(r'^notifications/', include('django_nyt.urls')),
+    re_path(r'^wiki/', include('wiki.urls')),
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
